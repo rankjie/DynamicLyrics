@@ -41,6 +41,11 @@
         [userDefaults setBool:YES forKey:@Pref_Enable_Desktop_Lyrics];
         [userDefaults setBool:YES forKey:@Pref_Enable_MenuBar_Lyrics];
     }
+	
+	if ([userDefaults objectForKey:@Pref_Enable_Auto_Write_Lyrics] == nil)
+    {
+        [userDefaults setBool:YES forKey:@Pref_Enable_Auto_Write_Lyrics];
+    }
 }
 
 -(IBAction)OpenAlbumfillerWindow:(id)sender

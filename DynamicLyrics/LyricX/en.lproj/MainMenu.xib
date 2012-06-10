@@ -65,6 +65,14 @@
 						<reference key="NSOnImage" ref="817365088"/>
 						<reference key="NSMixedImage" ref="112771844"/>
 					</object>
+					<object class="NSMenuItem" id="283381301">
+						<reference key="NSMenu" ref="105512611"/>
+						<string key="NSTitle">Auto Write Lyrics to iTunes</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="817365088"/>
+						<reference key="NSMixedImage" ref="112771844"/>
+					</object>
 					<object class="NSMenuItem" id="496384238">
 						<reference key="NSMenu" ref="105512611"/>
 						<bool key="NSIsDisabled">YES</bool>
@@ -411,6 +419,26 @@
 					</object>
 					<int key="connectionID">817</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: values.PreEnableAutoWriteLyrics</string>
+						<reference key="source" ref="283381301"/>
+						<reference key="destination" ref="668106822"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="283381301"/>
+							<reference key="NSDestination" ref="668106822"/>
+							<string key="NSLabel">value: values.PreEnableAutoWriteLyrics</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">values.PreEnableAutoWriteLyrics</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSValidatesImmediately</string>
+								<boolean value="YES" key="NS.object.0"/>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">821</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -460,6 +488,7 @@
 							<reference ref="496384238"/>
 							<reference ref="825473663"/>
 							<reference ref="189409604"/>
+							<reference ref="283381301"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -613,6 +642,11 @@
 						<reference key="object" ref="189409604"/>
 						<reference key="parent" ref="105512611"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">818</int>
+						<reference key="object" ref="283381301"/>
+						<reference key="parent" ref="105512611"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -649,9 +683,11 @@
 					<string>814.IBPluginDependency</string>
 					<string>815.IBPluginDependency</string>
 					<string>816.IBPluginDependency</string>
+					<string>818.IBPluginDependency</string>
 				</object>
 				<object class="NSArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -696,7 +732,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">817</int>
+			<int key="maxID">821</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

@@ -106,6 +106,18 @@
     }
 }
 
+-(IBAction)WriteLyricsToiTunes
+{
+    NSMutableString *s = [[NSMutableString alloc] init];
+    [s setString:@""];
+    for (int i = 0; i < [lyrics count]; i++) {
+        [s setString:[s stringByAppendingString:[NSString stringWithFormat:@"%@\n",[[lyrics objectAtIndex:i] objectForKey:@"Content"]]]];
+    }
+    iTunesCurrentTrack.lyrics = s;
+    [s release];
+	
+}
+
 - (void) SearchLyrics:(NSMutableDictionary*)tmpDict
 {
     NSString *SongTitle = [iTunesCurrentTrack name];
@@ -118,8 +130,10 @@
     [userDefaults setValue:[NSString stringWithString:self.SongLyrics] forKey:[NSString stringWithFormat:@"%@%@",SongArtist,SongTitle]];
     
     [self performSelectorOnMainThread:@selector(Anylize) withObject:nil waitUntilDone:YES];
-
-    
+	
+	if (@Pref_Enable_Auto_Write_Lyrics){
+		[self WriteLyricsToiTunes];
+	}
     [_convertManager release];
 }
 

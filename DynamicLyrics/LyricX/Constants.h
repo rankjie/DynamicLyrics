@@ -13,6 +13,7 @@
 #define Pref_Enable_Desktop_Lyrics "PrefEnableDesktopLyrics"
 #define Pref_Enable_Auto_Save_Lyrics "PrefEnableAutoSaveLyrics"
 #define Pref_Enable_Translator "PrefEnableTranslator"
+#define Pref_Enable_Auto_Write_Lyrics "PreEnableAutoWriteLyrics"
 
 
 #define Pref_Lyrics_FontName "PrefLyricsFontName"
